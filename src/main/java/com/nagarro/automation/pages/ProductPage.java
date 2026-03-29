@@ -20,7 +20,6 @@ public class ProductPage {
 	private By addToCartBtn = By.xpath("test//div[contains(text(),'Add to cart')]");
 	private By clickOnCartBtn = By.xpath("//a[@title='Cart']");
 
-	// Switch to new tab (important)
 	public void switchToProductWindow() {
 
 		String parent = driver.getWindowHandle();
