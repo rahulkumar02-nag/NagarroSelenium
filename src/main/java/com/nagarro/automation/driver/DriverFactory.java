@@ -18,17 +18,27 @@ public class DriverFactory {
 
     public static void initDriver() {
 
-    	String browser = System.getProperty("browser",
-    	        ConfigReader.getProperty("browser") != null ? ConfigReader.getProperty("browser") : "chrome");
-
-    	String headless = System.getProperty("headless",
-    	        ConfigReader.getProperty("headless") != null ? ConfigReader.getProperty("headless") : "true");
-
-        if (browser.equalsIgnoreCase("chrome")) {
+    	String browser = System.getProperty("browser");
+    	if (browser == null || browser.isEmpty()) {
+    	    browser = ConfigReader.getProperty("browser");
+    	}
+    	if (browser == null || browser.isEmpty()) {
+    	    browser = "chrome";
+    	}
+    	
+    	String headless = System.getProperty("headless");
+    	if (headless == null || headless.isEmpty()) {
+    	    headless = ConfigReader.getProperty("headless");
+    	}
+    	if (headless == null || headless.isEmpty()) {
+    	    headless = "true";
+    	}
+    	
+    	if ("chrome".equalsIgnoreCase(browser)) {
 
             ChromeOptions options = new ChromeOptions();
 
-            if (headless.equalsIgnoreCase("true")) {
+            if ("true".equalsIgnoreCase(headless)) {
                 options.addArguments("--headless=new");
                 options.addArguments("--window-size=1920,1080");
             }
@@ -40,11 +50,11 @@ public class DriverFactory {
             driver.set(new ChromeDriver(options));
         }
 
-        else if (browser.equalsIgnoreCase("edge")) {
+        else if ("edge".equalsIgnoreCase(browser)) {
 
             EdgeOptions options = new EdgeOptions();
 
-            if (headless.equalsIgnoreCase("true")) {
+            if ("true".equalsIgnoreCase(headless)) {
                 options.addArguments("--headless=new");
                 options.addArguments("--window-size=1920,1080");
             }
@@ -56,11 +66,11 @@ public class DriverFactory {
             driver.set(new EdgeDriver(options));
         }
 
-        else if (browser.equalsIgnoreCase("firefox")) {
+        else if ("firefox".equalsIgnoreCase(browser)) {
 
             FirefoxOptions options = new FirefoxOptions();
 
-            if (headless.equalsIgnoreCase("true")) {
+            if ("true".equalsIgnoreCase(headless)) {
                 options.addArguments("--headless");
             }
 
@@ -72,7 +82,9 @@ public class DriverFactory {
             throw new RuntimeException("Invalid Browser Name");
         }
 
-        driver.get().manage().window().maximize();
+        if (!headless.equalsIgnoreCase("true")) {
+            driver.get().manage().window().maximize();
+        }
     }
 
     public static WebDriver getDriver() {

@@ -47,15 +47,21 @@ jobs:
     - name: Build Project
       run: mvn -B clean install -DskipTests
 
-    # 6. Upload TestNG reports
+    # 6. Run Tests
+    - name: Run Tests
+      run: mvn test -Dbrowser=chrome -Dheadless=true
+
+    # 7. Upload TestNG reports
     - name: Upload TestNG Reports
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: testng-reports
         path: test-output/
 
-    # 7. Upload Extent Reports
+    # 8. Upload Extent Reports
     - name: Upload Extent Reports
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: extent-reports
