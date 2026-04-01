@@ -18,8 +18,11 @@ public class DriverFactory {
 
     public static void initDriver() {
 
-        String browser = ConfigReader.getProperty("browser");
-        String headless = ConfigReader.getProperty("headless");
+    	String browser = System.getProperty("browser",
+    	        ConfigReader.getProperty("browser") != null ? ConfigReader.getProperty("browser") : "chrome");
+
+    	String headless = System.getProperty("headless",
+    	        ConfigReader.getProperty("headless") != null ? ConfigReader.getProperty("headless") : "true");
 
         if (browser.equalsIgnoreCase("chrome")) {
 
@@ -29,6 +32,9 @@ public class DriverFactory {
                 options.addArguments("--headless=new");
                 options.addArguments("--window-size=1920,1080");
             }
+            
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
 
             WebDriverManager.chromedriver().setup();
             driver.set(new ChromeDriver(options));
@@ -43,6 +49,9 @@ public class DriverFactory {
                 options.addArguments("--window-size=1920,1080");
             }
 
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            
             WebDriverManager.edgedriver().setup();
             driver.set(new EdgeDriver(options));
         }
