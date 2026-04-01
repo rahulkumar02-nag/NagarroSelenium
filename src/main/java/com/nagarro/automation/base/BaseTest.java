@@ -8,18 +8,18 @@ import com.nagarro.automation.driver.DriverFactory;
 import com.nagarro.automation.utils.ConfigReader;
 
 public class BaseTest {
-	
+
 	@BeforeMethod
 	public void setUp() {
-		String browser = ConfigReader.getProperty("browser");
-        String url = ConfigReader.getProperty("url");
-		
-		DriverFactory.initDriver(browser);
-		
+
+		String url = ConfigReader.getProperty("url");
+
+		DriverFactory.initDriver();
+
 		WebDriver driver = DriverFactory.getDriver();
 		driver.get(url);
 	}
-	
+
 	@AfterMethod
 	public void tearDown() {
 		DriverFactory.quitDriver();
