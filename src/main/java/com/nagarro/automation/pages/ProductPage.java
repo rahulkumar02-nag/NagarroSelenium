@@ -17,7 +17,7 @@ public class ProductPage {
 		this.driver = DriverFactory.getDriver();
 	}
 
-	private By addToCartBtn = By.xpath("test//div[contains(text(),'Add to cart')]");
+	private By addToCartBtn = By.xpath("//div[contains(text(),'Add to cart')]");
 	private By clickOnCartBtn = By.xpath("//a[@title='Cart']");
 
 	public void switchToProductWindow() {
@@ -46,8 +46,9 @@ public class ProductPage {
 	}
 
 	public void addToCart() {
-		WaitUtil.waitForVisibility(addToCartBtn).click();
-		WaitUtil.staticWait(5);
+		
+		WaitUtil.waitForElementPresent(addToCartBtn);
+		WaitUtil.waitForClickable(addToCartBtn).click();
 	}
 
 	public void clickOnCartButton() {

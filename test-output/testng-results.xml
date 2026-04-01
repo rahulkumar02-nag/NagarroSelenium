@@ -1,195 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="0" total="5" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-29T15:26:23 IST" name="Suite" finished-at="2026-03-29T15:27:44 IST" duration-ms="80755">
+  <suite started-at="2026-04-01T21:34:11 IST" name="Suite" finished-at="2026-04-01T21:34:31 IST" duration-ms="20457">
     <groups>
     </groups>
-    <test started-at="2026-03-29T15:26:23 IST" name="Flipkart Tests" finished-at="2026-03-29T15:27:44 IST" duration-ms="80755">
+    <test started-at="2026-04-01T21:34:11 IST" name="Flipkart Tests" finished-at="2026-04-01T21:34:31 IST" duration-ms="20457">
       <class name="com.nagarro.tests.testcases.FlipkartTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:23 IST" name="setUp" finished-at="2026-03-29T15:26:28 IST" duration-ms="5207" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:11 IST" name="setUp" finished-at="2026-04-01T21:34:16 IST" duration-ms="4523" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:23 IST" name="setUp" finished-at="2026-03-29T15:26:28 IST" duration-ms="5297" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:11 IST" name="setUp" finished-at="2026-04-01T21:34:15 IST" duration-ms="4365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyGuestSearchFlow()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:28 IST" name="verifyGuestSearchFlow" finished-at="2026-03-29T15:26:33 IST" duration-ms="4947" status="PASS">
+        <test-method signature="verifyGuestAddToCart()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:15 IST" name="verifyGuestAddToCart" finished-at="2026-04-01T21:34:25 IST" duration-ms="9939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGuestAddToCart -->
+        <test-method signature="verifyGuestSearchFlow()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:16 IST" name="verifyGuestSearchFlow" finished-at="2026-04-01T21:34:24 IST" duration-ms="8409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGuestSearchFlow -->
-        <test-method retried="true" signature="verifyGuestAddToCart()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:28 IST" name="verifyGuestAddToCart" finished-at="2026-03-29T15:26:51 IST" duration-ms="22492" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: test//div[contains(text(),'Add to cart')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"test//div[contains(text(),'Add to cart')]"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62141}, goog:processID: 43836, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62141/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fcc9fb63f9dd9b2082f208416e1a27c7]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: test//div[contains(text(),'Add to cart')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"test//div[contains(text(),'Add to cart')]"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62141}, goog:processID: 43836, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62141/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fcc9fb63f9dd9b2082f208416e1a27c7
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-at com.nagarro.automation.utils.WaitUtil.waitForVisibility(WaitUtil.java:22)
-at com.nagarro.automation.pages.ProductPage.addToCart(ProductPage.java:50)
-at com.nagarro.tests.testcases.FlipkartTest.verifyGuestAddToCart(FlipkartTest.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGuestAddToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:33 IST" name="tearDown" finished-at="2026-03-29T15:26:34 IST" duration-ms="1289" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:24 IST" name="tearDown" finished-at="2026-04-01T21:34:25 IST" duration-ms="809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:34 IST" name="setUp" finished-at="2026-03-29T15:26:39 IST" duration-ms="4410" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:25 IST" name="setUp" finished-at="2026-04-01T21:34:28 IST" duration-ms="3533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyGuestUserFilter()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:39 IST" name="verifyGuestUserFilter" finished-at="2026-03-29T15:26:43 IST" duration-ms="4040" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:25 IST" name="tearDown" finished-at="2026-04-01T21:34:27 IST" duration-ms="1287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method signature="verifyGuestUserFilter()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:28 IST" name="verifyGuestUserFilter" finished-at="2026-04-01T21:34:31 IST" duration-ms="2390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyGuestUserFilter -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:43 IST" name="tearDown" finished-at="2026-03-29T15:26:44 IST" duration-ms="1132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:51 IST" name="tearDown" finished-at="2026-03-29T15:26:52 IST" duration-ms="1148" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:52 IST" name="setUp" finished-at="2026-03-29T15:26:57 IST" duration-ms="4863" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method retried="true" signature="verifyGuestAddToCart()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:26:57 IST" name="verifyGuestAddToCart" finished-at="2026-03-29T15:27:16 IST" duration-ms="19750" status="SKIP">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: test//div[contains(text(),'Add to cart')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"test//div[contains(text(),'Add to cart')]"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 39700, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1cb6e35210f19aea8ee56a377061b869]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: test//div[contains(text(),'Add to cart')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"test//div[contains(text(),'Add to cart')]"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57787}, goog:processID: 39700, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57787/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1cb6e35210f19aea8ee56a377061b869
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-at com.nagarro.automation.utils.WaitUtil.waitForVisibility(WaitUtil.java:22)
-at com.nagarro.automation.pages.ProductPage.addToCart(ProductPage.java:50)
-at com.nagarro.tests.testcases.FlipkartTest.verifyGuestAddToCart(FlipkartTest.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGuestAddToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:27:16 IST" name="tearDown" finished-at="2026-03-29T15:27:18 IST" duration-ms="1186" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:27:18 IST" name="setUp" finished-at="2026-03-29T15:27:22 IST" duration-ms="4413" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyGuestAddToCart()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:27:22 IST" name="verifyGuestAddToCart" finished-at="2026-03-29T15:27:42 IST" duration-ms="20006" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element found by By.xpath: test//div[contains(text(),'Add to cart')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"test//div[contains(text(),'Add to cart')]"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53740}, goog:processID: 42116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53740/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c82f91c16811cff5422333a4aaa6b0b1]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: test//div[contains(text(),'Add to cart')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"test//div[contains(text(),'Add to cart')]"}.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.41.0', revision: '9fc754f'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\RAHULK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53740}, goog:processID: 42116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53740/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c82f91c16811cff5422333a4aaa6b0b1
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:233)
-at com.nagarro.automation.utils.WaitUtil.waitForVisibility(WaitUtil.java:22)
-at com.nagarro.automation.pages.ProductPage.addToCart(ProductPage.java:50)
-at com.nagarro.tests.testcases.FlipkartTest.verifyGuestAddToCart(FlipkartTest.java:56)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyGuestAddToCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@60db1c0e]" started-at="2026-03-29T15:27:42 IST" name="tearDown" finished-at="2026-03-29T15:27:44 IST" duration-ms="1200" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nagarro.tests.testcases.FlipkartTest@7fd7a283]" started-at="2026-04-01T21:34:31 IST" name="tearDown" finished-at="2026-04-01T21:34:31 IST" duration-ms="759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
