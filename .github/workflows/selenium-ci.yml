@@ -1,0 +1,62 @@
+name: Selenium TestNG CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    # 1. Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. Setup Java
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: 17
+
+    # 3. Cache Maven dependencies (faster builds)
+    - name: Cache Maven packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.m2
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+
+    # 4. Browser Setup
+    # Chrome
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@v1
+
+    # Firefox
+    - name: Setup Firefox
+      uses: browser-actions/setup-firefox@v1
+
+    # Edge
+    - name: Setup Edge
+      uses: browser-actions/setup-edge@v1
+
+    # 5. Build project
+    - name: Build Project
+      run: mvn -B clean install -DskipTests
+
+    # 6. Upload TestNG reports
+    - name: Upload TestNG Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: testng-reports
+        path: test-output/
+
+    # 7. Upload Extent Reports
+    - name: Upload Extent Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: extent-reports
+        path: reports/
